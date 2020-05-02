@@ -17,16 +17,18 @@
 import { Vue, Component } from "vue-property-decorator";
 import Primary from "@/components/Class/Primary.vue";
 import Secondary from "@/components/Class/Secondary.vue";
+import GetterAndSetter from "@/components/Class/GetterAndSetter.vue";
 
 @Component({
   components: {
     Primary,
-    Secondary
+    Secondary,
+    GetterAndSetter
   }
 })
 export default class Type extends Vue {
   currentcomponent = "";
-  lessons = ["Primary", "Secondary"];
+  lessons = ["Primary", "Secondary", "GetterAndSetter"];
   changeComponent(lessonNumber: number) {
     this.currentcomponent = this.lessons[lessonNumber];
   }
