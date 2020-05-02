@@ -15,8 +15,8 @@
 
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
-import TypeVariable from "@/components/Easy/TypeVariable.vue";
-import TypeFunction from "@/components/Easy/TypeFunction.vue";
+import TypeVariable from "@/components/Type/TypeVariable.vue";
+import TypeFunction from "@/components/Type/TypeFunction.vue";
 
 @Component({
   components: {
@@ -24,9 +24,9 @@ import TypeFunction from "@/components/Easy/TypeFunction.vue";
     TypeFunction
   }
 })
-export default class Easy extends Vue {
+export default class Type extends Vue {
   currentcomponent = "";
-  lessons = ["TypeVariable", "TypeFunction", "kkk"];
+  lessons = ["TypeVariable", "TypeFunction"];
   changeComponent(lessonNumber: number) {
     this.currentcomponent = this.lessons[lessonNumber];
   }

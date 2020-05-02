@@ -1,14 +1,14 @@
 import Vue from "vue";
 import VueRouter, { RouteConfig } from "vue-router";
-const Easy = () => import(/* webpackChunkName: "Easy" */ "@/views/Easy.vue");
+const Class = () => import(/* webpackChunkName: "Class" */ "@/views/Class.vue");
 
 Vue.use(VueRouter);
 
 const routes: Array<RouteConfig> = [
   {
-    path: "/easy",
-    name: "Easy",
-    component: Easy
+    path: "/class",
+    name: "Class",
+    component: Class
   }
 ];
 

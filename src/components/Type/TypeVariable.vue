@@ -54,7 +54,7 @@ export default class TypeVariable extends Vue {
   // 何でもOK, 普通のjavascriptの変数と同じ
   anithing: any = 100;
 
-  // どっちか
+  // どっちか(union)
   unionCase: string | number = "5";
 
   // リテラル型 (appleという型になる。クラス外でconstで定義すると型推論されてこれになる)
