@@ -16,15 +16,17 @@
 <script lang="ts">
 import { Vue, Component } from "vue-property-decorator";
 import Primary from "@/components/Class/Primary.vue";
+import Secondary from "@/components/Class/Secondary.vue";
 
 @Component({
   components: {
-    Primary
+    Primary,
+    Secondary
   }
 })
 export default class Type extends Vue {
   currentcomponent = "";
-  lessons = ["Primary"];
+  lessons = ["Primary", "Secondary"];
   changeComponent(lessonNumber: number) {
     this.currentcomponent = this.lessons[lessonNumber];
   }
