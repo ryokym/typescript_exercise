@@ -2,6 +2,7 @@
   <div>
     <p>Function</p>
     <p>{{ func(1, 2) }}</p>
+    <p>{{ func3() }}</p>
   </div>
 </template>
 
@@ -24,13 +25,29 @@ class Function extends Vue implements Person {
   name = "koyama";
   age = 33;
   // 通常の関数typeエイリアスを使って関数funcをクラス内に定義する
-  func: addFunc = (num1, num2) => {
+  // ただしthisが文脈に従って変化することに注意。以下はエディタ上のlintでエラーが出る
+  func: addFunc = (this: { age: number }, num1, num2) => {
+    console.log(this.name);
     return num1 + num2;
   };
+  func1(num1: number, num2: number) {
+    return num1 * num2;
+  }
+
   // interfaceを使った関数への型注釈。onマウスしても "interface AddFunc" と出るだけなので、ドキュメントとしてはあまりよろしくない。
   func2: AddFunc = (num1, num2) => {
     return num1 + num2;
   };
+
+  // 参考
+  funcStandart(this: { age: number }) {
+    console.log(this.age);
+  }
+  // funcAllow = (this: { age: number }) => {
+  //   console.log(this.age);
+  // };
 }
+// const instance = new Function();
+
 export default Function;
 </script>
