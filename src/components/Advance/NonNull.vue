@@ -1,5 +1,8 @@
 <template>
-  <div>{{ getCurrentComponentName }}</div>
+  <div>
+    <p>{{ getCurrentComponentName }}</p>
+    <input id="input" ref="inputtext" />
+  </div>
 </template>
 
 <script lang="ts">
@@ -12,6 +15,16 @@ class Intersection extends Vue {
 
   get getCurrentComponentName() {
     return this.componentName;
+  }
+
+  mounted() {
+    // non-null-asertion
+    const inputText = this.$refs.inputtext!;
+    if (inputText instanceof HTMLInputElement) {
+      inputText.value = "foo";
+    }
+    // 以下は一行書き
+    // (this.$refs.inputtext as HTMLInputElement).value = "bar";
   }
 }
 
