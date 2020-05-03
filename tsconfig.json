@@ -16,7 +16,7 @@
     "paths": {
       "@/*": ["src/*"]
     },
-    "lib": ["es6", "dom", "dom.iterable", "scripthost"]
+    "lib": ["es2018", "dom", "dom.iterable", "scripthost"]
     // allowjs .jsもcompileの対象とする outdirなどと併用する
     // checkjs .jsファイルもlinterを適用する
     // jsx
@@ -24,7 +24,7 @@
     // declarationMap 上記と同様
 
     // Vueを含まないTypescriptでtscした場合。dist以下で指定したディレクトリ構造を保持する
-    // "rootDir": "./src",
+    // "rootDir": "./src"
     // dist以下を生成しない。エラー内容のみ確認したい場合に使用
     // "noEmit": true,
     // targetがes3とはes2の時で尚且、for of を使う時に設定すると良い
