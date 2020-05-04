@@ -28,6 +28,7 @@ import FunctionOverload from "@/components/Advance/FunctionOverload.vue";
 import OperationChaining from "@/components/Advance/OperationChaining.vue";
 import NullishCoalescing from "@/components/Advance/NullishCoalescing.vue";
 import Lookup from "@/components/Advance/Lookup.vue";
+import RestTuple from "@/components/Advance/RestTuple.vue";
 
 @Component({
   components: {
@@ -40,7 +41,8 @@ import Lookup from "@/components/Advance/Lookup.vue";
     FunctionOverload,
     OperationChaining,
     NullishCoalescing,
-    Lookup
+    Lookup,
+    RestTuple
   }
 })
 export default class Type extends Vue {
@@ -56,7 +58,8 @@ export default class Type extends Vue {
     "FunctionOverload",
     "OperationChaining",
     "NullishCoalescing",
-    "Lookup"
+    "Lookup",
+    "RestTuple"
   ];
   changeComponent(lessonNumber: number) {
     this.currentcomponent = this.lessons[lessonNumber];
