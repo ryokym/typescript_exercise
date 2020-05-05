@@ -1,7 +1,7 @@
 <template>
   <div>
     <p>{{ getCurrentComponentName }}</p>
-    <p></p>
+    <p>Skip!</p>
   </div>
 </template>
 
