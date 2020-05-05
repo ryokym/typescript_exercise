@@ -25,6 +25,8 @@ enum CoffeSize {
 
 // Typeエイリアス
 type ClothSize = "small" | "medium" | "large";
+// Typeエイリアスでタプル型
+type bookTuple = [string, number, boolean];
 
 @Component
 export default class TypeVariable extends Vue {
@@ -50,6 +52,8 @@ export default class TypeVariable extends Vue {
 
   // タプル ※型推論せず、全て注釈して定義する(加工はできてしまうが、出力時にエラーを吐いてくれる)
   book: [string, number, boolean] = [CoffeSize.SHORT, 100, true];
+  // タプル型のタイプエイリアスを使ってbook2を定義
+  book2: bookTuple = [CoffeSize.SHORT, 100, true];
 
   // 何でもOK, 普通のjavascriptの変数と同じ
   anithing: any = 100;
