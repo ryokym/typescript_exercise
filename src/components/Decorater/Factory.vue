@@ -8,6 +8,13 @@
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
 
+function Logging(msg: string) {
+  return function(constructor: Function) {
+    console.log(msg + " : loggingStart!");
+  };
+}
+
+@Logging("Factory")
 @Component
 class Intersection extends Vue {
   @Prop({ default: "" })
