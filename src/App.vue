@@ -4,8 +4,9 @@
       <router-link to="/" class="nav-items">Top</router-link> |
       <router-link to="/type" class="nav-items">Type</router-link> |
       <router-link to="/class" class="nav-items">Class</router-link> |
-      <router-link to="/interface" class="nav-items">Interface</router-link>
-      <router-link to="/advance" class="nav-items">Advance</router-link>
+      <router-link to="/interface" class="nav-items">Interface</router-link> |
+      <router-link to="/advance" class="nav-items">Advance</router-link> |
+      <router-link to="/generics" class="nav-items">Generics</router-link>
     </div>
     <router-view />
   </div>

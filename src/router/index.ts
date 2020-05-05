@@ -6,6 +6,8 @@ const Interface = () =>
   import(/* webpackChunkName: "Interface" */ "@/views/Interface.vue");
 const Advance = () =>
   import(/* webpackChunkName: "Advance" */ "@/views/Advance.vue");
+const Generics = () =>
+  import(/* webpackChunkName: "Generics" */ "@/views/Generics.vue");
 
 Vue.use(VueRouter);
 
@@ -29,6 +31,11 @@ const routes: Array<RouteConfig> = [
     path: "/advance",
     name: "Advance",
     component: Advance
+  },
+  {
+    path: "/generics",
+    name: "Generics",
+    component: Generics
   }
 ];
 
