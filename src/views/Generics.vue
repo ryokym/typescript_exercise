@@ -26,6 +26,7 @@ import UseInterface from "@/components/Generics/UseInterface.vue";
 import DefaultTypeParam from "@/components/Generics/DefaultTypeParam.vue";
 import MappedTypes from "@/components/Generics/MappedTypes.vue";
 import ConditionalTypes from "@/components/Generics/ConditionalTypes.vue";
+import BuiltinTypes from "@/components/Generics/BuiltinTypes.vue";
 
 @Component({
   components: {
@@ -36,7 +37,8 @@ import ConditionalTypes from "@/components/Generics/ConditionalTypes.vue";
     UseInterface,
     DefaultTypeParam,
     MappedTypes,
-    ConditionalTypes
+    ConditionalTypes,
+    BuiltinTypes
   }
 })
 export default class Type extends Vue {
@@ -50,7 +52,8 @@ export default class Type extends Vue {
     "UseInterface",
     "DefaultTypeParam",
     "MappedTypes",
-    "ConditionalTypes"
+    "ConditionalTypes",
+    "BuiltinTypes"
   ];
   changeComponent(lessonNumber: number) {
     this.currentcomponent = this.lessons[lessonNumber];
