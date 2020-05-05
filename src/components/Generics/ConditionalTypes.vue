@@ -8,6 +8,8 @@
 <script lang="ts">
 import { Vue, Component, Prop } from "vue-property-decorator";
 
+type ConditionalTypes = "tomato" extends string ? number : boolean;
+
 @Component
 class Intersection extends Vue {
   @Prop({ default: "" })
