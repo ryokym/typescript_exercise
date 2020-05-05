@@ -29,6 +29,7 @@ import OperationChaining from "@/components/Advance/OperationChaining.vue";
 import NullishCoalescing from "@/components/Advance/NullishCoalescing.vue";
 import Lookup from "@/components/Advance/Lookup.vue";
 import RestTuple from "@/components/Advance/RestTuple.vue";
+import ConstAsertion from "@/components/Advance/ConstAsertion.vue";
 
 @Component({
   components: {
@@ -42,7 +43,8 @@ import RestTuple from "@/components/Advance/RestTuple.vue";
     OperationChaining,
     NullishCoalescing,
     Lookup,
-    RestTuple
+    RestTuple,
+    ConstAsertion
   }
 })
 export default class Type extends Vue {
@@ -59,7 +61,8 @@ export default class Type extends Vue {
     "OperationChaining",
     "NullishCoalescing",
     "Lookup",
-    "RestTuple"
+    "RestTuple",
+    "ConstAsertion"
   ];
   changeComponent(lessonNumber: number) {
     this.currentcomponent = this.lessons[lessonNumber];
